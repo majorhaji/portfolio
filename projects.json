@@ -1,0 +1,10 @@
+{
+  "projects": [
+    {
+      "name": "Stock Portfolio Web App",
+      "url": "https://pynance.netlify.app/",
+      "stack": "Python, Flask, React, Firebase",
+      "description": "A stock tracker web app that allows you to keep track of your stock holdings with AI price predictions"
+    }
+  ]
+}

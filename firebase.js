@@ -23,20 +23,64 @@ admin.initializeApp({
 const db = admin.database();
 const ref = db.ref();
 
-const updatePortfolio = {
-  name: "Stock Portfolio Web App",
-  url: "https://pynance.netlify.app/",
-  stack: "Python, Flask, React, Firebase",
+const addProject = (portfolio) => {
+  return ref
+    .child("portfolio")
+    .child(portfolio.name)
+    .set(portfolio, (error) => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(`${portfolio.name} added to database`);
+      }
+    });
 };
 
-ref
-  .child("portfolio")
-  .child(updatePortfolio.name)
-  .set(updatePortfolio, (error) => {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("data saved");
-    }
-  });
-module.exports = admin;
+const deleteProject = (projectName) => {
+  return ref
+    .child("portfolio")
+    .child(projectName)
+    .remove((error) => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(`${projectName} removed from database`);
+      }
+    });
+};
+
+const updateProject = (portfolio) => {
+  return ref
+    .child("portfolio")
+    .child(portfolio.name)
+    .update(portfolio, (error) => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(`${portfolio.name} updated with new data`);
+      }
+    });
+};
+
+const getProject = (projectName) => {
+  return ref
+    .child("portfolio")
+    .child(projectName)
+    .once("value", (snapshot) => {
+      const project = snapshot.val();
+      if (project) {
+        return project;
+      } else {
+        console.log(`${projectName} not found`);
+      }
+    });
+};
+
+module.exports = {
+  db,
+  ref,
+  addProject,
+  deleteProject,
+  updateProject,
+  getProject,
+};
