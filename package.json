@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "react-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +19,13 @@
   },
   "homepage": "https://github.com/majorhaji/portfolio#readme",
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.8",
     "firebase": "^9.17.1",
     "firebase-admin": "^11.5.0"
+  },
+  "devDependencies": {
+    "react-scripts": "^5.0.1"
   }
 }

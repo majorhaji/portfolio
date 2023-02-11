@@ -78,10 +78,30 @@ nav a {
   border-bottom: 1px solid goldenrod;
   padding: 20%;
   background-color: #87cefa;
+  margin-bottom: 0px;
 }
 
 .intro h1,
 h3,
 p {
   background-color: #87cefa;
+}
+
+.projects {
+  padding: 30%;
+  background-color: #f8f8f8;
+}
+
+.projects h3 {
+  text-align: left;
+  padding: 2% 0% 0% 10%;
+}
+
+.projects * {
+  background-color: inherit;
+}
+
+.footer {
+  padding: 10%;
+  background-color: #e0ffff;
 }
