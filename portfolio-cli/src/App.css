@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Tobias Light";
+  src: url("../tobias-light-maisfontes.227e/tobias-light.ttf");
+}
+
+* {
+  font-family: "Tobias Light";
+  background-image: url("https://lynnandtonic.com/assets/images/bg-grain-dark.png");
+  background-color: #e0ffff;
+  background-size: 350px auto;
+  background-repeat: repeat;
+}
+
 .App {
   text-align: center;
 }
@@ -28,6 +41,30 @@
   color: #61dafb;
 }
 
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid goldenrod;
+}
+
+.header div {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+nav a {
+  margin-right: 30px;
+}
+
+.logo {
+  border-right: 1px solid goldenrod;
+  text-align: center;
+}
+
+.nav {
+  border-right: 1px solid goldenrod;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +72,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.intro {
+  border-bottom: 1px solid goldenrod;
+  padding: 20%;
+  background-color: #87cefa;
+}
+
+.intro h1,
+h3,
+p {
+  background-color: #87cefa;
 }
