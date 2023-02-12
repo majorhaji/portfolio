@@ -23,7 +23,8 @@
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.8",
     "firebase": "^9.17.1",
-    "firebase-admin": "^11.5.0"
+    "firebase-admin": "^11.5.0",
+    "font-awesome": "^4.7.0"
   },
   "devDependencies": {
     "react-scripts": "^5.0.1"

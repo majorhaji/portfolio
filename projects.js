@@ -23,7 +23,7 @@ admin.initializeApp({
 const db = admin.database();
 const ref = db.ref();
 
-const addProject = (portfolio) => {
+exports.addProject = (portfolio) => {
   return ref
     .child("portfolio")
     .child(portfolio.name)
@@ -36,7 +36,7 @@ const addProject = (portfolio) => {
     });
 };
 
-const deleteProject = (projectName) => {
+exports.deleteProject = (projectName) => {
   return ref
     .child("portfolio")
     .child(projectName)
@@ -49,7 +49,7 @@ const deleteProject = (projectName) => {
     });
 };
 
-const updateProject = (portfolio) => {
+exports.updateProject = (portfolio) => {
   return ref
     .child("portfolio")
     .child(portfolio.name)
@@ -62,7 +62,7 @@ const updateProject = (portfolio) => {
     });
 };
 
-const getProject = (projectName) => {
+exports.getProject = (projectName) => {
   return ref
     .child("portfolio")
     .child(projectName)
@@ -74,13 +74,4 @@ const getProject = (projectName) => {
         console.log(`${projectName} not found`);
       }
     });
-};
-
-module.exports = {
-  db,
-  ref,
-  addProject,
-  deleteProject,
-  updateProject,
-  getProject,
 };

@@ -6,39 +6,13 @@
 * {
   font-family: "Tobias Light";
   background-image: url("https://lynnandtonic.com/assets/images/bg-grain-dark.png");
-  background-color: #e0ffff;
+  background-color: rgb(250, 246, 231);
   background-size: 350px auto;
   background-repeat: repeat;
 }
 
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .header {
@@ -54,6 +28,7 @@
 }
 
 nav a {
+  background-color: inherit;
   margin-right: 30px;
 }
 
@@ -88,17 +63,39 @@ p {
 }
 
 .projects {
-  padding: 30%;
-  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
 }
 
 .projects h3 {
   text-align: left;
   padding: 2% 0% 0% 10%;
+  padding: 20%;
 }
 
 .projects * {
   background-color: inherit;
+}
+
+.project {
+}
+
+.tech-stack {
+  margin: 20px;
+  padding: 20px;
+}
+
+.tech-stack svg {
+  max-width: 30px;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+iframe {
+  margin-left: 40px;
+  border-radius: 5px;
+  width: 700px;
+  height: 500px;
 }
 
 .footer {
