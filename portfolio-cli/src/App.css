@@ -65,6 +65,7 @@ p {
 .projects {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .projects h3 {

@@ -28,10 +28,13 @@ const Projects = () => {
 
   useEffect(() => {});
   return (
-    <main className="projects">
+    <section className="projects">
+      <div className="heading">
+        <h2>Projects</h2>
+      </div>
       {projects.map((project) => {
         return (
-          <section className="project">
+          <article className="project">
             <h4>
               <a href={project.url}> {project.name}</a>
             </h4>
@@ -43,10 +46,10 @@ const Projects = () => {
               <p>Built using: </p>
               {iconObj["React"]} {iconObj["Flask"]} {iconObj["Python"]}
             </div>
-          </section>
+          </article>
         );
       })}
-    </main>
+    </section>
   );
 };
 export default Projects;
