@@ -81,11 +81,6 @@ p {
 .project {
 }
 
-.tech-stack {
-  margin: 20px;
-  padding: 20px;
-}
-
 .tech-stack svg {
   max-width: 30px;
   padding: 10px;
@@ -97,6 +92,66 @@ iframe {
   border-radius: 5px;
   width: 700px;
   height: 500px;
+}
+
+.about {
+  display: grid;
+  grid-template-areas:
+    "about img img"
+    "bio bio skills";
+}
+
+p {
+  background-color: inherit;
+}
+
+.about-section {
+  grid-area: about;
+  border-bottom: 1px solid goldenrod;
+  width: 30vw;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.about-image {
+  grid-area: img;
+  border-left: 1px solid goldenrod;
+  border-bottom: 1px solid goldenrod;
+}
+
+.bio {
+  grid-area: bio;
+  border: 1px solid goldenrod;
+  border-top: none;
+  padding: 20px;
+}
+.tech-stack {
+  background-color: grey;
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  grid-area: skills;
+  margin: 20px;
+  border: 1px solid goldenrod;
+}
+
+.skills {
+  background-color: inherit;
+}
+
+.skill {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.skill img {
+  max-width: 30px;
+  height: 20px;
+  margin: 10px;
+  padding: 20px;
 }
 
 .footer {

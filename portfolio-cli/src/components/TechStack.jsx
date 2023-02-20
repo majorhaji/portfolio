@@ -8,6 +8,7 @@ const Stack = ({ skill }) => {
   return (
     <div className="skill">
       <h4>{tech.name}</h4>
+      {tech.icon}
     </div>
   );
 };
