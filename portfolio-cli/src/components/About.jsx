@@ -1,5 +1,6 @@
 import Bio from "./Bio";
 import TechStack from "./TechStack";
+import template from "./IMG_3974 (1).jpg";
 
 const About = () => {
   const skills = [
@@ -50,7 +51,9 @@ const About = () => {
       <section className="about-section">
         <p>About Me</p>
       </section>
-      <section className="about-image"></section>
+      <section className="about-image">
+        <img src={template} className="me" />
+      </section>
       <Bio />
       <aside className="tech-stack">
         <h3 className="skills">Skills:</h3>

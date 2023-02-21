@@ -42,7 +42,7 @@ const Projects = () => {
               <iframe src={`${project.url}`} title={`${project.name}`}></iframe>
             </div>
 
-            <div className="tech-stack">
+            <div className="stack">
               <p>Built using: </p>
               {iconObj["React"]} {iconObj["Flask"]} {iconObj["Python"]}
             </div>
