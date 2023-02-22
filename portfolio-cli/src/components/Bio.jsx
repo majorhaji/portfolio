@@ -3,12 +3,13 @@ const Bio = () => {
     <div className="bio">
       <section className="about-me">
         <p>
-          Hi, I'm a software developer. I'm currently based in Luton, England.
-          I'm really passionate about bringing my ideas to life through code and
-          I'm tremendously passionate about it, even when I'm stuck on a
-          particular problem for hours on end, tearing my hair out over it! I'm
-          new to the industry, but I am confident in my ability to work hard at
-          anything I put my mind to.{" "}
+          Hi, I'm a software developer based in Luton, England. I'm really
+          passionate about bringing my ideas to life through code and I'm
+          tremendously passionate about it, even when I'm tearing my hair out
+          over being stuck on a particular problem for hours on end! <br></br>
+        </p>
+        <p>
+          I'm new to the industry, but I am confident in being able to learn.{" "}
         </p>
 
         <p>

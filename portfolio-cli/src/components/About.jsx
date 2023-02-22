@@ -49,11 +49,12 @@ const About = () => {
   return (
     <main className="about">
       <section className="about-section">
+        <section className="about-image">
+          <img src={template} className="me" />
+        </section>
         <p>About Me</p>
       </section>
-      <section className="about-image">
-        <img src={template} className="me" />
-      </section>
+
       <Bio />
       <aside className="tech-stack">
         <h3 className="skills">Skills:</h3>

@@ -61,6 +61,15 @@ h3,
 p {
   background-color: #87cefa;
 }
+.stack {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
+  border: 1px solid goldenrod;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 .projects {
   display: flex;
@@ -97,8 +106,13 @@ iframe {
 .about {
   display: grid;
   grid-template-areas:
-    "about about img"
-    "bio bio skills";
+    "about about bio"
+    "skills skills skills";
+}
+
+.about img {
+  padding: 0.5px;
+  border-bottom: 1px solid goldenrod;
 }
 
 p {
@@ -108,15 +122,8 @@ p {
 .about-section {
   grid-area: about;
   border-bottom: 1px solid goldenrod;
-  width: 35vw;
   font-size: 40px;
   font-weight: bold;
-}
-
-.about-image {
-  grid-area: img;
-  border-left: 1px solid goldenrod;
-  border-bottom: 1px solid goldenrod;
 }
 
 .me {
@@ -128,26 +135,11 @@ p {
   border: 1px solid goldenrod;
   border-top: none;
   padding: 20px;
+  font-size: 30px;
 }
 .tech-stack {
-  background-color: grey;
-  width: 300px;
-  padding: 10px;
-  border-radius: 5px;
   grid-area: skills;
-  margin: 20px;
-  border: 1px solid goldenrod;
-}
-
-.stack {
-  width: 300px;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 20px;
-  border: 1px solid goldenrod;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  border-top: 1px solid goldenrod;
 }
 
 .stack svg {
@@ -164,13 +156,22 @@ p {
   justify-content: center;
   margin: 5px;
   border-radius: 5px;
+  background-color: #87cefa;
+  flex-grow: 1;
+  color: #f8f8f8;
+}
+
+.skill h4 {
+  background-color: #87cefa;
+  font-size: 20px;
 }
 
 .skill img {
-  max-width: 30px;
-  height: 20px;
+  max-width: 60px;
+  height: 50px;
   margin: 10px;
   padding: 20px;
+  background-color: #87cefa;
 }
 
 .footer {
