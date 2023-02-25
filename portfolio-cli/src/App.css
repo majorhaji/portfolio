@@ -52,14 +52,20 @@ nav a {
 .intro {
   border-bottom: 1px solid goldenrod;
   padding: 20%;
-  background-color: #87cefa;
+  background-image: url("https://i.gifer.com/embedded/download/GIWH.gif");
+  background-size: cover;
   margin-bottom: 0px;
+}
+
+.intro h1 {
+  font-size: 50px;
+  color: #f8f8f8;
 }
 
 .intro h1,
 h3,
 p {
-  background-color: #87cefa;
+  background-color: transparent;
 }
 .stack {
   padding: 10px;
