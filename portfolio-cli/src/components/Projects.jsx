@@ -29,7 +29,7 @@ const Projects = () => {
 
   const [channel, setChannel] = useState(0);
 
-  useEffect(() => {});
+  useEffect(() => {}, [channel]);
   return (
     <section id="projects">
       <div className="heading">
