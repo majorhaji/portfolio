@@ -9,6 +9,7 @@
   background-color: rgb(250, 246, 231);
   background-size: 350px auto;
   background-repeat: repeat;
+  text-decoration: none;
 }
 
 .App {
@@ -32,13 +33,21 @@ nav a {
   margin-right: 30px;
 }
 
+a {
+  color: #0fa2fd;
+}
+
+a:hover {
+  text-decoration: underline solid #d0b530;
+}
+
 .logo {
-  border-right: 1px solid goldenrod;
+  border-right: 1px solid #d0b530;
   text-align: center;
 }
 
 .nav {
-  border-right: 1px solid goldenrod;
+  border-right: 1px solid #d0b530;
 }
 @keyframes App-logo-spin {
   from {
@@ -50,7 +59,7 @@ nav a {
 }
 
 .intro {
-  border-bottom: 1px solid goldenrod;
+  border-bottom: 1px solid #d0b530;
   padding: 20%;
   background-image: url("https://i.gifer.com/embedded/download/GIWH.gif");
   background-size: cover;
@@ -71,7 +80,7 @@ p {
   padding: 10px;
   border-radius: 5px;
   margin: 20px;
-  border: 1px solid goldenrod;
+
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -110,15 +119,13 @@ iframe {
 }
 
 .about {
-  display: grid;
-  grid-template-areas:
-    "about about bio"
-    "skills skills skills";
+  border-top: 1px solid #d0b530;
 }
 
 .about img {
   padding: 0.5px;
-  border-bottom: 1px solid goldenrod;
+  border-bottom: 1px solid #d0b530;
+  margin-top: 10px;
 }
 
 p {
@@ -126,10 +133,10 @@ p {
 }
 
 .about-section {
-  grid-area: about;
-  border-bottom: 1px solid goldenrod;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #d0b530;
   font-size: 40px;
-  font-weight: bold;
 }
 
 .me {
@@ -137,15 +144,14 @@ p {
 }
 
 .bio {
-  grid-area: bio;
-  border: 1px solid goldenrod;
+  border: 1px solid #d0b530;
   border-top: none;
+  border-bottom: none;
   padding: 20px;
-  font-size: 30px;
+  font-size: 20px;
 }
 .tech-stack {
   grid-area: skills;
-  border-top: 1px solid goldenrod;
 }
 
 .stack svg {

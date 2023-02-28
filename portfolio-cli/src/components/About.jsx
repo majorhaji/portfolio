@@ -51,22 +51,10 @@ const About = () => {
       <section className="about-section">
         <section className="about-image">
           <img src={template} className="me" />
+          <h3>About Me</h3>
         </section>
-        <p>About Me</p>
+        <Bio />
       </section>
-
-      <Bio />
-      <aside className="tech-stack">
-        <h3 className="skills">Skills:</h3>
-        {skills.map((skill) => {
-          return (
-            <div className="skill">
-              <TechStack skill={skill} />
-              <img src={skill.url} alt={skill.name}></img>
-            </div>
-          );
-        })}
-      </aside>
     </main>
   );
 };
