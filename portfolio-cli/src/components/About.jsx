@@ -47,7 +47,7 @@ const About = () => {
     },
   ];
   return (
-    <main className="about">
+    <main id="about">
       <section className="about-section">
         <section className="about-image">
           <img src={template} className="me" />

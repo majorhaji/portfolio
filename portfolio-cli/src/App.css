@@ -86,23 +86,32 @@ p {
   margin-bottom: 20px;
 }
 
-.projects {
+#projects {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.projects h3 {
+#projects h3 {
   text-align: left;
   padding: 2% 0% 0% 10%;
   padding: 20%;
 }
 
-.projects * {
-  background-color: inherit;
+#projects * {
+  /* background-color: inherit; */
 }
 
-.project {
+.tv {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.channel {
+  margin-left: 30px;
+  background-color: #007fce;
+  height: 500px;
 }
 
 .tech-stack svg {
@@ -118,11 +127,11 @@ iframe {
   height: 500px;
 }
 
-.about {
+#about {
   border-top: 1px solid #d0b530;
 }
 
-.about img {
+#about img {
   padding: 0.5px;
   border-bottom: 1px solid #d0b530;
   margin-top: 10px;

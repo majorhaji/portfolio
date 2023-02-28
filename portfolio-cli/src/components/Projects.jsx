@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Channels from "./Channels";
 
 const Projects = () => {
   const iconObj = {
@@ -26,29 +27,34 @@ const Projects = () => {
     },
   ]);
 
+  const [channel, setChannel] = useState(0);
+
   useEffect(() => {});
   return (
-    <section className="projects">
+    <section id="projects">
       <div className="heading">
         <h2>Projects</h2>
       </div>
-      {projects.map((project) => {
-        return (
-          <article className="project">
+      <div className="tv">
+        <article className="project">
+          <div className="interactive">
+            <iframe
+              src={`${projects[channel].url}`}
+              title={`${projects[channel].name}`}
+            ></iframe>
             <h4>
-              <a href={project.url}> {project.name}</a>
+              <a href={projects[channel].url}> {projects[channel].name}</a>
             </h4>
-            <div className="interactive">
-              <iframe src={`${project.url}`} title={`${project.name}`}></iframe>
-            </div>
-
             <div className="stack">
               <p>Built using: </p>
-              {iconObj["React"]} {iconObj["Flask"]} {iconObj["Python"]}
+              {projects[channel].stack.map((tech) => {
+                return iconObj[tech];
+              })}
             </div>
-          </article>
-        );
-      })}
+          </div>
+        </article>
+        <Channels setChannel={setChannel} />
+      </div>
     </section>
   );
 };
