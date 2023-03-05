@@ -1,6 +1,6 @@
 import Bio from "./Bio";
 import TechStack from "./TechStack";
-import template from "./IMG_3974 (1).jpg";
+import template from "./pic.png";
 
 const About = () => {
   const skills = [
