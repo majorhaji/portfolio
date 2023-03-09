@@ -48,13 +48,12 @@ const About = () => {
   ];
   return (
     <main id="about">
-      <section className="about-section">
-        <section className="about-image">
-          <img src={template} className="me" />
-          <h3>About Me</h3>
-        </section>
-        <Bio />
+      <h3>About Me</h3>
+      <section className="about-image">
+        <img src={template} className="me" />
       </section>
+
+      <Bio />
     </main>
   );
 };

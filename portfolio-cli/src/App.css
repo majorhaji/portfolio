@@ -149,8 +149,8 @@ p {
   flex-direction: row;
 
   margin-right: 20px;
-
   padding: 100px;
+  padding-bottom: 0px;
 }
 
 @media (max-width: 1400px) {
@@ -211,25 +211,29 @@ iframe {
 
 #about {
   height: 100vh;
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  margin-top: 10%;
+}
+
+#about h3 {
+  font-size: 40px;
 }
 
 #about img {
-  padding: 0.5px;
+  border-radius: 30%;
+  margin: 2% 3% 0 3%;
+  border: 1px solid #d0b530;
+  background-color: pink;
+}
 
-  margin-top: 10px;
+#about img:hover {
+  background-color: #fa5f55;
 }
 
 p {
   background-color: inherit;
-}
-
-.about-section {
-  display: flex;
-  flex-direction: row;
-
-  font-size: 40px;
-  height: 100vh;
 }
 
 .me {
@@ -241,6 +245,9 @@ p {
   border-bottom: none;
   padding: 20px;
   font-size: 20px;
+  background-color: #87cefa;
+  border-radius: 10px;
+  margin: 8% 3% 0 3%;
 }
 .tech-stack {
   grid-area: skills;
@@ -248,6 +255,7 @@ p {
 
 .stack svg {
   max-width: 50px;
+  padding: 8px;
 }
 
 .skills {
@@ -279,6 +287,7 @@ p {
 }
 
 .footer {
+  margin-top: 20%;
   padding: 10%;
   background-color: #e0ffff;
 }
