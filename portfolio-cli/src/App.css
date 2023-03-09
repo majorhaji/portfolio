@@ -94,6 +94,7 @@ p {
   border-radius: 100px;
   animation: animate 15s linear infinite;
   animation-duration: calc(400s / var(--i));
+  opacity: 0.8;
 }
 
 .clouds::before {
@@ -106,6 +107,7 @@ p {
   background: #fff;
   border-radius: 50%;
   box-shadow: 90px 0 0 30px #fff;
+  opacity: 0.95;
 }
 
 @keyframes animate {
