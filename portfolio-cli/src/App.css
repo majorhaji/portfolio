@@ -81,32 +81,43 @@ p {
   overflow: hidden;
   flex-grow: 1;
   display: flex;
+  flex-direction: column;
+  background-color: #419dd6;
 }
 
 .clouds {
   position: relative;
-  width: 30px;
-  height: 30px;
-  background-color: red;
-  margin: 0 4px;
-
-  border-radius: 50%;
-  box-shadow: 0 0 0 10px black, 0 0 50px #0fa2fd, 0 0 100px #d0b530;
-
+  top: 50px;
+  width: 320px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 100px;
   animation: animate 15s linear infinite;
-  animation-duration: calc(125s / var(--i));
+  animation-duration: calc(400s / var(--i));
+}
+
+.clouds::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 40px;
+  width: 110px;
+  height: 110px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 90px 0 0 30px #fff;
 }
 
 @keyframes animate {
   0% {
-    transform: translateX(-10vw);
+    transform: translateX(-50vw);
   }
   100% {
-    transform: translateX(100vw);
+    transform: translateX(110vw);
   }
 }
 .intro-heading {
-  margin-top: 300px;
+  align-self: center;
 }
 .stack {
   padding: 10px;

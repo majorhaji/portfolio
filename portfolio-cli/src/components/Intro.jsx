@@ -15,7 +15,6 @@ const Intro = () => {
         <span className="clouds" style={{ "--i": 18 }}></span>
 
         <span className="clouds" style={{ "--i": 16 }}></span>
-
         <div className="intro-heading">
           <h1>Hi, I'm Yusuf.</h1>
           <h3>A software developer by day, superhero by night*</h3>
