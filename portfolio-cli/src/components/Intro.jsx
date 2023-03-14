@@ -3,8 +3,8 @@ const Intro = () => {
     <section className="intro">
       <div className="sky">
         <span className="clouds" style={{ "--i": 9 }}></span>
-
         <span className="clouds" style={{ "--i": 12 }}></span>
+        <div className="sun"></div>
         <span className="clouds" style={{ "--i": 3 }}></span>
         <span className="clouds" style={{ "--i": 7 }}></span>
 
