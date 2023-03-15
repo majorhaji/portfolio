@@ -10,6 +10,23 @@
   text-decoration: none;
 }
 
+:root {
+  /** sunny side **/
+  --blue-background: #c2e9f6;
+  --blue-border: #72cce3;
+  --blue-color: #96dcee;
+  --yellow-background: #fffaa8;
+  --yellow-border: #f5eb71;
+  /** dark side **/
+  --indigo-background: #808fc7;
+  --indigo-border: #5d6baa;
+  --indigo-color: #6b7abb;
+  --gray-border: #e8e8ea;
+  --gray-dots: #e8e8ea;
+  /** general **/
+  --white: #fff;
+}
+
 .App {
   text-align: center;
 }
@@ -18,6 +35,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+
   border-bottom: 1px solid goldenrod;
 }
 
@@ -47,13 +65,20 @@ a:hover {
 .nav {
   border-right: 1px solid #d0b530;
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.toggle--checkbox {
+  display: none;
+}
+
+.toggle--label {
+  margin-left: 50%;
+  width: 60px;
+  height: 30px;
+  background: var(--blue-color);
+  border-radius: 100px;
+  border: 5px solid var(--blue-border);
+  display: flex;
+  position: relative;
+  transition: all 350ms ease-in;
 }
 
 .intro {
@@ -140,12 +165,12 @@ p {
 @keyframes rays {
   0% {
     box-shadow: 0 0 0 0px #ffde0080, 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040,
-      0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010, 0 0 40px 100px #ffde0010;
+      0 0 0 60px #ffde0020, 0 0 0 80px #ffdd004d, 0 0 40px 100px #ffde0010;
   }
 
   100% {
     box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020,
-      0 0 0 80px #ffde0080, 0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
+      0 0 0 80px #ffdd0052, 0 0 0 100px #ffde0000, 0 0 0 100px #ffde0010;
   }
 }
 
@@ -160,7 +185,7 @@ p {
 
 @keyframes start {
   0% {
-    transform: translateX(50vw);
+    transform: translateX(0vw);
     opacity: 0;
   }
 
@@ -228,7 +253,7 @@ p {
   flex-direction: row;
 
   margin-right: 20px;
-  padding: 100px;
+  padding-top: 30px;
   padding-bottom: 0px;
 }
 
@@ -282,9 +307,8 @@ p {
 }
 
 iframe {
-  margin-left: 40px;
   border-radius: 5px;
-  width: 700px;
+  width: 60vw;
   height: 500px;
 }
 
@@ -368,5 +392,6 @@ p {
 .footer {
   margin-top: 20%;
   padding: 10%;
-  background-color: #e0ffff;
+  background-color: #947c06;
+  height: 30vh;
 }

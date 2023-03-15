@@ -4,9 +4,9 @@ import ScrollProgress from "./ScrollProgress";
 const Header = () => {
   return (
     <div className="header">
-      <Link to="/">
-        <div className="logo">Yusuf Haji</div>
-      </Link>
+      <div className="logo">
+        <Link to="/">Yusuf Haji</Link>
+      </div>
       <div className="nav">
         <nav>
           <a href="#projects">Projects</a>
@@ -14,7 +14,10 @@ const Header = () => {
         </nav>
       </div>
       <div className="console">
-        <button className="dark-mode">Dark Mode</button>
+        <input type="checkbox" id="toggle" className="toggle--checkbox" />
+        <label for="toggle" className="toggle--label">
+          <span className="toggle--label-background"></span>
+        </label>
       </div>
     </div>
   );
