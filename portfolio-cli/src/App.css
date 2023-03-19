@@ -35,6 +35,18 @@
   --bio: #1f2735;
   --bio-hover: #fa5f55;
   --text: black;
+  --links: #309de0;
+  --link-hover: #d0b530;
+
+  /** Sun**/
+  --margin: 40px;
+  --width: 100px;
+  --height: 150px;
+  --background-color: #ffde00;
+  --border-radius: 50%;
+  --box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020,
+    0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
+  --animation: sunrise 2s infinite linear forwards, rays 2s 2s infinite linear;
 }
 
 html.dark-mode {
@@ -43,15 +55,25 @@ html.dark-mode {
   --borders: #fdfd96;
   --background: #1f2735;
   --sky: #0b0d25;
-  --boxes: #f44336;
+  --boxes: #0d0d0d;
   --clouds: #465b70;
   --bio: #4c4c4c;
   --background-color: #0d0d0d;
   --bio-hover: #fdfd96;
   --header: #4c4c4c;
-}
+  --links: #fdfd96;
+  --link-hover: #0b0d25;
 
-.sun.dark-mode {
+  /** moon **/
+  --margin: 40px;
+
+  --background-color: #f5f5f5;
+
+  --border-radius: 50%;
+  --box-shadow: 0 0 0 0.1em rgba(255, 255, 255, 0.05),
+    0 0 0 0.3em rgba(255, 255, 255, 0.05), 0 0 0 1,
+    1em rgba(255, 255, 255, 0.05);
+  --animation: sunrise 5s infinite linear forwards, lunar 4s 8s infinite linear;
 }
 
 .App {
@@ -80,11 +102,11 @@ nav a {
 }
 
 a {
-  color: var(--sky);
+  color: var(--links);
 }
 
 a:hover {
-  text-decoration: underline solid var(--borders);
+  text-decoration: underline solid var(--link-hover);
 }
 
 .logo {
@@ -303,14 +325,13 @@ p {
 }
 
 .sun {
-  margin: 40px;
-  width: 100px;
-  height: 150px;
-  background-color: #ffde00;
-  border-radius: 50%;
-  box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020,
-    0 0 0 80px #ffde0010, 0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
-  animation: sunrise 2s infinite linear forwards, rays 2s 2s infinite linear;
+  margin: var(--margin);
+  width: var(--width);
+  height: var(--height);
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  animation: var(--animation);
 }
 
 @keyframes sunrise {
@@ -328,6 +349,16 @@ p {
   100% {
     box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020,
       0 0 0 80px #ffdd0052, 0 0 0 100px #ffde0000, 0 0 0 100px #ffde0010;
+  }
+}
+
+@keyframes lunar {
+  0% {
+    box-shadow: 0 0 0 0px #ffffff80, 0 0 0 5px #ffffff80, 0 0 0 6px #ffffff40;
+  }
+
+  100% {
+    box-shadow: 0 0 0 1px #ffffff96, 0 0 0 2px #ffffff71, 0 0 0 4px #ffffff40;
   }
 }
 
