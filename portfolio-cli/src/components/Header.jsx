@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
-import ScrollProgress from "./ScrollProgress";
-
+import { useState } from "react";
 const Header = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const toggleDarkMode = (e) => {
+    setIsDarkMode(!isDarkMode);
+    const root = window.document.documentElement;
+    root.classList.toggle("dark-mode", isDarkMode);
+  };
   return (
     <div className="header">
       <div className="logo">
@@ -14,7 +19,12 @@ const Header = () => {
         </nav>
       </div>
       <div className="console">
-        <input type="checkbox" id="toggle" className="toggle--checkbox" />
+        <input
+          type="checkbox"
+          id="toggle"
+          className="toggle--checkbox"
+          onClick={toggleDarkMode}
+        />
         <label for="toggle" className="toggle--label">
           <span className="toggle--label-background"></span>
         </label>

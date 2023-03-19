@@ -1,8 +1,14 @@
 import Bio from "./Bio";
 import TechStack from "./TechStack";
 import template from "./pic.png";
-
+import { useState } from "react";
 const About = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const toggleDarkMode = (e) => {
+    setIsDarkMode(!isDarkMode);
+    const root = window.document.documentElement;
+    root.classList.toggle("dark-mode", isDarkMode);
+  };
   const skills = [
     { name: "Flask", url: "https://img.icons8.com/ios/500/flask.png" },
     {

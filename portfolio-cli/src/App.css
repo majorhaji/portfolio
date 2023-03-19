@@ -5,7 +5,6 @@
 
 * {
   font-family: "Tobias Light";
-  background-image: url("https://lynnandtonic.com/assets/images/bg-grain-dark.png");
 
   text-decoration: none;
 }
@@ -27,38 +26,47 @@
   --white: #fff;
 
   /** Light mode*/
-  --light-gold: #d0b530;
-  --sky: #419dd6;
-  --blue-links: #0fa2fd;
-  --light-blue: #87cefa;
-  --light-white: #f8f8f8;
-
-  --bio-black: #1f2735;
+  --borders: #d0b530;
+  --background: #419dd6;
+  --sky: #309de0;
+  --boxes: #87cefa;
+  --background: #f8f8f8;
+  --clouds: #fff;
+  --bio: #1f2735;
   --bio-hover: #fa5f55;
-  /**Dark mode*/
-  --dark-yellow: #fdfd96;
-  --dark-sky: #171127;
-  --dark-links: #4c4c4c;
-  --dark-red: #f44336;
-  --bio-pink: pink;
-  --dark-white: #0d0d0d;
+  --text: black;
+}
 
-  --dark-bio-hover: #22b629;
+html.dark-mode {
+  /**Dark mode*/
+  --text: #fdfd96;
+  --borders: #fdfd96;
+  --background: #1f2735;
+  --sky: #0b0d25;
+  --boxes: #f44336;
+  --clouds: #465b70;
+  --bio: #4c4c4c;
+  --background-color: #0d0d0d;
+  --bio-hover: #fdfd96;
+  --header: #4c4c4c;
+}
+
+.sun.dark-mode {
 }
 
 .App {
   text-align: center;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 .header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 1px solid var(--light-gold);
-}
-
-[data-theme="dark"].header {
-  border-bottom: 1px solid var(--dark-red);
+  border-bottom: 1px solid var(--borders);
+  background-color: var(--header);
+  color: var(--text);
 }
 
 .header div {
@@ -72,20 +80,20 @@ nav a {
 }
 
 a {
-  color: var(--blue-links);
+  color: var(--sky);
 }
 
 a:hover {
-  text-decoration: underline solid var(--light-gold);
+  text-decoration: underline solid var(--borders);
 }
 
 .logo {
-  border-right: 1px solid var(--light-gold);
+  border-right: 1px solid var(--borders);
   text-align: center;
 }
 
 .nav {
-  border-right: 1px solid var(--light-gold);
+  border-right: 1px solid var(--borders);
 }
 .toggle--checkbox {
   display: none;
@@ -235,11 +243,11 @@ a:hover {
   background-size: cover;
   margin-bottom: 0px;
   height: 100vh;
+  color: var(--borders);
 }
 
 .intro h1 {
   font-size: 50px;
-  color: var(--light-gold);
 }
 
 .intro h1,
@@ -264,7 +272,7 @@ p {
   top: 50px;
   width: 320px;
   height: 100px;
-  background-color: #fff;
+  background-color: var(--clouds);
   border-radius: 100px;
   animation: animate 15s linear infinite;
   animation-duration: calc(400s / var(--i));
@@ -278,9 +286,9 @@ p {
   left: 40px;
   width: 110px;
   height: 110px;
-  background: #fff;
+  background: var(--clouds);
   border-radius: 50%;
-  box-shadow: 90px 0 0 30px #fff;
+  box-shadow: 90px 0 0 30px var(--clouds);
   opacity: 0.95;
 }
 
@@ -476,8 +484,8 @@ iframe {
 #about img {
   border-radius: 30%;
   margin: 2% 3% 0 3%;
-  border: 1px solid var(--light-gold);
-  background-color: var(--bio-black);
+  border: 1px solid var(--borders);
+  background-color: var(--bio);
 }
 
 #about img:hover {
@@ -497,7 +505,7 @@ p {
   border-bottom: none;
   padding: 20px;
   font-size: 20px;
-  background-color: var(--light-blue);
+  background-color: var(--boxes);
   border-radius: 10px;
   margin: 8% 3% 0 3%;
 }
@@ -520,13 +528,13 @@ p {
   justify-content: center;
   margin: 5px;
   border-radius: 5px;
-  background-color: var(--light-blue);
+  background-color: var(--boxes);
   flex-grow: 1;
   color: #f8f8f8;
 }
 
 .skill h4 {
-  background-color: var(--light-blue);
+  background-color: var(--boxes);
   font-size: 20px;
 }
 
@@ -535,13 +543,13 @@ p {
   height: 50px;
   margin: 10px;
   padding: 20px;
-  background-color: var(--light-blue);
+  background-color: var(--boxes);
 }
 
 .footer {
   margin-top: 20%;
   padding: 10%;
-  background-color: var(--light-blue);
-  color: var(--light-gold);
+  background-color: var(--boxes);
+  color: var(--borders);
   height: 30vh;
 }

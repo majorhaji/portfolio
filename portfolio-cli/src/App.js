@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
 import ScrollProgress from "./components/ScrollProgress";
+import { useState } from "react";
 
 function App() {
   return (
